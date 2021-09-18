@@ -50,7 +50,7 @@ exports.uploadIMG = multer({
             cb(null, true);
         }
     },
-    limits: { fieldSize: 2 * 1024 * 1024 },
+    // limits: { fieldSize: 2 * 1024 * 1024 },
 });
 exports.uploadVID = multer({
     storage: storageVID,
@@ -64,7 +64,7 @@ exports.uploadVID = multer({
         }
         cb(null, true);
     },
-    limits: { fieldSize: 12 * 1024 * 1024 },
+    // limits: { fieldSize: 12 * 1024 * 1024 },
 });
 exports.uploadAUD = multer({
     storage: storageAUD,
@@ -78,12 +78,12 @@ exports.uploadAUD = multer({
         }
         cb(null, true);
     },
-    limits: { fieldSize: 8 * 1024 * 1024 },
+    // limits: { fieldSize: 8 * 1024 * 1024 },
 });
 exports.uploadOTH = multer({
     storage: storageOTH,
     fileFilter: (req, file, cb) => {
         cb(null, true);
     },
-    limits: { fieldSize: 20 * 1024 * 1024 },
+    // limits: { fieldSize: 20 * 1024 * 1024 },
 });
