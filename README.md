@@ -65,6 +65,49 @@ ___
 4. Test for if the file upload, Download is working or not.
 5. If they are working well and good, else create an issue with the steps to replicate the issue and any error logs for help.
 
+## Usage through API
+
+The Request format is:
+
+- method: `POST`
+- form-encType: `multipart/form-data`
+- url for Image uploads: `/upld/img`
+- url for Video uploads: `/upld/vid`
+- url for Audio uploads: `/upld/aud`
+- url for Other uploads: `/upld/oth`
+
+payload:
+
+```json
+{
+   "uName":"",          // User name of the uploader
+   "fileType":"",       // Type of file
+   "file":              // File that you want to upload
+}
+```
+
+The Response to that Request is this:
+
+```json
+{
+   "url": "",                       // URL through which you can access the file
+    "body": {                       // Request body
+        "uName": "",
+        "fileType": ""
+    },
+    "file": {                       // information on the file that has been uploaded
+        "fieldname": "",
+        "originalname": "",
+        "encoding": "",
+        "mimetype": "",
+        "destination": "",
+        "filename": "",
+        "path": "",
+        "size": ""
+    }
+}
+```
+
 ## More Updates incoming in future
 
 >- [ ] Code Documentation pending
