@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test Site for Media Upload Download Service</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div style="height: 100vh; width: 100vw">
+            <div
+                class="
+                    w-100
+                    h-100
+                    d-flex
+                    justify-content-center
+                    align-items-center
+                "
+            >
+                <form
+                    id="Upload"
+                    class="w-75"
+                    enctype="multipart/form-data"
+                    action="/upld/img"
+                    method="POST"
+                >
+                    <div class="input-group mb-3">
+                        <span
+                            class="input-group-text"
+                            id="inputGroup-sizing-default"
+                            >Your Name</span
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="uName"
+                            aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default"
+                        />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span
+                            class="input-group-text"
+                            id="inputGroup-sizing-default"
+                            >File Name</span
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="fName"
+                            aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default"
+                        />
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="fileType"
+                            id="inlineRadio1"
+                            value="audio"
+                            onclick="document.getElementById('Upload').action='/upld/aud'"
+                        />
+                        <label class="form-check-label" for="inlineRadio1"
+                            >Audio</label
+                        >
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="fileType"
+                            id="inlineRadio2"
+                            value="video"
+                            onclick="document.getElementById('Upload').action='/upld/vid'"
+                        />
+                        <label class="form-check-label" for="inlineRadio2"
+                            >Video</label
+                        >
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="fileType"
+                            id="inlineRadio3"
+                            value="image"
+                            onclick="document.getElementById('Upload').action='/upld/img'"
+                        />
+                        <label class="form-check-label" for="inlineRadio3"
+                            >Image</label
+                        >
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            name="fileType"
+                            id="inlineRadio4"
+                            value="other"
+                            onclick="document.getElementById('Upload').action='/upld/oth'"
+                        />
+                        <label class="form-check-label" for="inlineRadio3"
+                            >Others</label
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <input
+                            class="form-control"
+                            name="file"
+                            type="file"
+                            id="formFile"
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Upload
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
